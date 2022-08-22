@@ -1,0 +1,23 @@
+<html>
+
+    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+    <script type="text/javascript">
+    var intval = setInterval(function(){
+    var uvuru = document.getElementById("my_box_realtime").style.right;
+    var brain = document.getElementById("my_box_realtime").style.bottom;
+    var peter = uvuru.split('px');
+    var obi = brain.split('px');
+    //let name = document.body.innerHTML = peter;
+    var int_peter = Number(peter[0]);
+    var int_obi = Number(obi[0]);
+    int_peter--;
+    int_obi--;
+    var peter = int_peter.toString();
+    var str_obi = int_obi.toString().concat("px");
+    var str_pet = peter.concat("px");
+    //let name = document.body.innerHTML = str_obi;
+    uvuru = document.getElementById("my_box_realtime").style.right = str_pet;
+    brain = document.getElementById("my_box_realtime").style.bottom = str_obi;
+    },500);
+    </script>
+</html>

@@ -1,0 +1,38 @@
+<html style='background-color: black'>
+<div id="my_bouncing_box"
+      style="background-color: blue; border-radius: 3px; position: absolute; left: 200px; top: 200px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;">
+      Ukwuoma_n</div>
+<script type="text/javascript">
+      var box = document.getElementById("my_bouncing_box");
+      var screenwidth = window.innerWidth;
+      var screenheight = window.innerHeight;
+      //let box_lft = box.style.left;
+      //let box_tp = box.style.top;
+      //let tp = window.screenTop;
+      var directionx = 1;
+      var directiony = -1;
+      var dx = 0;
+      var dy = 0;
+      intrval = setInterval(function(){
+            box_lft = box.style.left = dx;
+            box_tp = box.style.top = dy;
+            dx++;
+            dy++;
+            
+            if (box_lft < 0){//off the left of the screen
+                  dx = dx - 1;
+            }
+            if (box_lft > screenwidth - 105){//off the right of the screen
+                  dx = dx - 1;
+            }
+            if (box_tp < 0){//off the top of the screen 
+                  dy = dy - 1;
+            }
+            if (box_tp > screenheight - 105){//off the bottom of the screen
+                  dy = dy - 1;
+            }
+      }, 10);
+
+</script>
+
+</html>
